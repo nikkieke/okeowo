@@ -4,6 +4,7 @@ import 'package:okeowo/core/routes/routes.dart';
 
 import '../../features/cards/presentation/screens/cards.dart';
 import '../../features/home/presentation/screens/entry_point.dart';
+import '../../features/home/presentation/screens/generate_voucher.dart';
 import '../../features/home/presentation/screens/home.dart';
 import '../../features/home/presentation/screens/splashscreen.dart';
 import '../../features/settings/presentation/screens/settings.dart';
@@ -37,6 +38,15 @@ final router = GoRouter(
             pageBuilder: (context, state) => const NoTransitionPage(
               child: HomeScreen(),
             ),
+            routes: [
+              GoRoute(
+                parentNavigatorKey: _rootNavigatorKey,
+                path: Routes.GENERATE_VOUCHER,
+                pageBuilder: (context, state) => const NoTransitionPage(
+                  child: GenerateVoucher(),
+                ),
+              ),
+            ]
           ),
 
           GoRoute(
