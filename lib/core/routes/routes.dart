@@ -22,5 +22,5 @@ abstract class Paths {
   static const TRANSACTIONS = '/transactions';
   static const CARDS = '/cards';
   static const SETTINGS = '/settings';
-  static const GENERATE_VOUCHER = '/generateVoucher';
+  static const GENERATE_VOUCHER = 'generateVoucher';
 }
