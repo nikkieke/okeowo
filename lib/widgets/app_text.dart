@@ -41,7 +41,7 @@ class AppText extends StatelessWidget{
         fontSize: size,
         fontWeight: fontWeight,
         color: color,
-        height: height ?? 1.0,
+        height: height ?? 1.5,
         fontFamily: fontFamily ?? GoogleFonts.nunito().fontFamily,
         decoration: line,
       ),
