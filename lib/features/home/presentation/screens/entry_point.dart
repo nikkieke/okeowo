@@ -45,6 +45,9 @@ class _EntryPointState extends State<EntryPoint> {
     return Scaffold(
       body: widget.child,
       bottomNavigationBar: Container(
+        constraints: const BoxConstraints(
+          minHeight: 86,
+        ),
         height: 80.h,
         padding: EdgeInsets.zero,
         color: AppColors.starkWhite,
