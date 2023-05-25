@@ -35,14 +35,14 @@ class TransactionList extends StatelessWidget {
                           AppText(
                             text: dummyList[index].name,
                             color: AppColors.primaryColor,
-                            size: 14.sp,
+                            size: 14,
                             fontWeight: FontWeight.w600,
                           ),
                           SizedBox(height: 5.h,),
                           AppText(
                             text: dummyList[index].time,
                             color: AppColors.ashGrey,
-                            size: 13.sp,
+                            size: 13,
                             fontWeight: FontWeight.w600,
                           ),
                         ],
@@ -52,7 +52,7 @@ class TransactionList extends StatelessWidget {
                 AppText(
                   text: dummyList[index].transactionAmt,
                   color: AppColors.primaryColor,
-                  size: 14.sp,
+                  size: 14,
                   fontWeight: FontWeight.w600,
                 ),
               ],
