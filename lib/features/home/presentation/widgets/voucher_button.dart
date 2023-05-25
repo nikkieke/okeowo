@@ -15,7 +15,7 @@ class VoucherButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 48.h,
+      padding: EdgeInsets.all(10.r),
       width: double.maxFinite,
       decoration: BoxDecoration(
         color: AppColors.primaryColor,
@@ -29,10 +29,10 @@ class VoucherButton extends StatelessWidget {
             width: 20.w,
           ),
           SizedBox(width: 8.w,),
-          AppText(
+          const AppText(
             text: "Generate Payment Voucher",
             color: AppColors.starkWhite,
-            size: 16.sp,
+            size: 16,
             fontWeight: FontWeight.w600,
           ),
         ],
