@@ -42,57 +42,62 @@ Future<Object?>voucherSuccessDialog(BuildContext context, {required ValueChanged
           backgroundColor: Colors.transparent,
           body: Padding(
             padding:  EdgeInsets.only(top: 32.r, bottom: 12.r),
-            child: Column(
-              children: [
-                AppText(
-                  text: "Generation Successful",
-                  fontWeight: FontWeight.w800,
-                  size: 16.sp,
-                  color: AppColors.primaryColor,
-                ),
-                SizedBox(height: 24.h,),
-                SizedBox(
-                  width: double.maxFinite,
-                  height: 72.h,
-                  child: AppText(
-                    text: "Voucher code generated successfully. Copy or share the code to the receipient for them to redeem it.",
-                    fontWeight: FontWeight.w600,
-                    size: 15.5.sp,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-                SizedBox(height: 12.h,),
-                const VoucherCardWidget(),
-                SizedBox(height: 12.h,),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+            child: SingleChildScrollView(
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height/1.3,
+                child: Column(
                   children: [
-                    SvgPicture.asset(
-                      "assets/icons/info.svg",
-                      width: 15.w,
+                    const AppText(
+                      text: "Generation Successful",
+                      fontWeight: FontWeight.w800,
+                      size: 16,
+                      color: AppColors.primaryColor,
                     ),
-                    SizedBox(width: 8.h,),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.topCenter,
-                        height: 46.h,
-                        child: AppText(
-                          text: "Voucher status can be viewed in the transaction screen. ",
-                          fontWeight: FontWeight.w600,
-                          size: 16.sp,
-                          color: AppColors.lightBlack,
-                        ),
+                    SizedBox(height: 24.h,),
+                    SizedBox(
+                      width: double.maxFinite,
+                      height: 72.h,
+                      child: const AppText(
+                        text: "Voucher code generated successfully. Copy or share the code to the receipient for them to redeem it.",
+                        fontWeight: FontWeight.w600,
+                        size: 15.5,
+                        color: AppColors.primaryColor,
                       ),
                     ),
+                    SizedBox(height: 12.h,),
+                    const VoucherCardWidget(),
+                    SizedBox(height: 12.h,),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/icons/info.svg",
+                          width: 15.w,
+                        ),
+                        SizedBox(width: 8.h,),
+                        Expanded(
+                          child: Container(
+                            alignment: Alignment.topCenter,
+                            height: 46.h,
+                            child: const AppText(
+                              text: "Voucher status can be viewed in the transaction screen. ",
+                              fontWeight: FontWeight.w600,
+                              size: 16,
+                              color: AppColors.lightBlack,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Spacer(),
+                    RawMaterialButton(
+                        onPressed: () {
+                          context.go(Routes.HOME);
+                        },
+                        child: const Button(text: "Return to home screen")),
                   ],
                 ),
-                const Spacer(),
-                RawMaterialButton(
-                    onPressed: () {
-                      context.go(Routes.HOME);
-                    },
-                    child: const Button(text: "Return to home screen")),
-              ],
+              ),
             ),
           )
         ),
