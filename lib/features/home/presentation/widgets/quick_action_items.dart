@@ -18,7 +18,7 @@ class QuickActionsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.h,
+      padding: EdgeInsets.only(top: 15.r, bottom: 15.r, right:5.r, left:5.r),
       width: 80.w,
       decoration: BoxDecoration(
         color: AppColors.leadGrey,
@@ -35,7 +35,7 @@ class QuickActionsItem extends StatelessWidget {
           AppText(
             text: text,
             color: AppColors.primaryColor,
-            size: 12.sp,
+            size: 12,
             fontWeight: FontWeight.w400,
           ),
         ],
