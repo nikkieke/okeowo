@@ -26,58 +26,60 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(bottom: 16, top: 20, left: 16,right: 16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                    children: [
+                      SvgPicture.asset(
+                          "assets/icons/avatar.svg",
+                        width: 26.w,
+                      ),
+                      SizedBox(width: 5.w,),
+                      const AppText(
+                          text: "Welcome Eniola",
+                          fontWeight: FontWeight.w700,
+                          size: 16,
+                      ),
+                    ],
+                  ),
+                SizedBox(height: 16.h,),
+                const CardWidget(),
+                SizedBox(height: 12.h,),
+                RawMaterialButton(
+                    onPressed: (){
+                      context.push("${Routes.HOME}/${Routes.GENERATE_VOUCHER}");
+                    },
+                    child: const VoucherButton()),
+                SizedBox(height: 24.h,),
+                const AppText(
+                  text: "Quick Actions",
+                  fontWeight: FontWeight.w700,
+                  size: 16,
+                ),
+                SizedBox(height: 12.h,),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SvgPicture.asset(
-                        "assets/icons/avatar.svg",
-                      width: 26.w,
-                    ),
-                    SizedBox(width: 5.w,),
-                    AppText(
-                        text: "Welcome Eniola",
-                        fontWeight: FontWeight.w700,
-                        size: 16.sp,
-                    ),
+                    QuickActionsItem(text: 'Redeem', iconPath: "assets/icons/redeem.svg",),
+                    QuickActionsItem(text: 'Fund Wallet', iconPath: "assets/icons/fund_wallet.svg",),
+                    QuickActionsItem(text: 'Withdraw', iconPath: "assets/icons/withdraw.svg",),
+                    QuickActionsItem(text: 'Scan Code', iconPath: "assets/icons/scan_code.svg",),
                   ],
                 ),
-              SizedBox(height: 16.h,),
-              const CardWidget(),
-              SizedBox(height: 12.h,),
-              RawMaterialButton(
-                  onPressed: (){
-                    context.push("${Routes.HOME}/${Routes.GENERATE_VOUCHER}");
-                  },
-                  child: const VoucherButton()),
-              SizedBox(height: 24.h,),
-              AppText(
-                text: "Quick Actions",
-                fontWeight: FontWeight.w700,
-                size: 16.sp,
-              ),
-              SizedBox(height: 12.h,),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  QuickActionsItem(text: 'Redeem', iconPath: "assets/icons/redeem.svg",),
-                  QuickActionsItem(text: 'Fund Wallet', iconPath: "assets/icons/fund_wallet.svg",),
-                  QuickActionsItem(text: 'Withdraw', iconPath: "assets/icons/withdraw.svg",),
-                  QuickActionsItem(text: 'Scan Code', iconPath: "assets/icons/scan_code.svg",),
-                ],
-              ),
-              SizedBox(height: 24.h,),
-              AppText(
-                text: "Transactions",
-                fontWeight: FontWeight.w700,
-                size: 16.sp,
-              ),
-              SizedBox(height: 12.h,),
-              const TransactionList()
+                SizedBox(height: 24.h,),
+                AppText(
+                  text: "Transactions",
+                  fontWeight: FontWeight.w700,
+                  size: 16.sp,
+                ),
+                SizedBox(height: 12.h,),
+                const TransactionList()
 
-            ],
+              ],
+            ),
           ),
         ),
       ),
