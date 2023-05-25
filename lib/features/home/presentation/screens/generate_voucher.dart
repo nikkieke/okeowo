@@ -69,7 +69,6 @@ class _GenerateVoucherState extends State<GenerateVoucher> {
                height: 24.h,
              ),
             SizedBox(
-              height: 48.h,
               width: 280.w,
               child: const AppText(
                 text: "Enter an amount you want to generate a voucher for.",

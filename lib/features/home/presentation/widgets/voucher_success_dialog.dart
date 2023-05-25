@@ -41,10 +41,10 @@ Future<Object?>voucherSuccessDialog(BuildContext context, {required ValueChanged
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: Padding(
-            padding:  EdgeInsets.only(top: 32.r, bottom: 12.r),
+            padding:  EdgeInsets.only(top: 12.r, bottom: 8.r),
             child: SingleChildScrollView(
               child: SizedBox(
-                height: MediaQuery.of(context).size.height/1.3,
+                height: MediaQuery.of(context).size.height/1.22,
                 child: Column(
                   children: [
                     const AppText(
@@ -54,10 +54,9 @@ Future<Object?>voucherSuccessDialog(BuildContext context, {required ValueChanged
                       color: AppColors.primaryColor,
                     ),
                     SizedBox(height: 24.h,),
-                    SizedBox(
+                    const SizedBox(
                       width: double.maxFinite,
-                      height: 72.h,
-                      child: const AppText(
+                      child: AppText(
                         text: "Voucher code generated successfully. Copy or share the code to the receipient for them to redeem it.",
                         fontWeight: FontWeight.w600,
                         size: 15.5,
