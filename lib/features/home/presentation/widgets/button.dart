@@ -16,7 +16,7 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      height: 48.h,
+      padding: EdgeInsets.all(10.r),
       width: double.maxFinite,
       decoration: BoxDecoration(
         color: AppColors.primaryColor,
@@ -25,7 +25,7 @@ class Button extends StatelessWidget {
       child: AppText(
         text: text,
         color: AppColors.starkWhite,
-        size: 16.sp,
+        size: 16,
         fontWeight: FontWeight.w600,
       ),
     );
