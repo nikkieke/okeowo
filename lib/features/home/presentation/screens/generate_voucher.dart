@@ -30,12 +30,12 @@ class _GenerateVoucherState extends State<GenerateVoucher> {
             Stack(
             alignment: Alignment.center,
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.center,
                 child: AppText(
                   text: "Generate Payment Voucher",
                   fontWeight: FontWeight.w800,
-                  size: 16.sp,
+                  size: 16,
                   color: AppColors.leadBlack,
                 ),
               ),
@@ -71,9 +71,9 @@ class _GenerateVoucherState extends State<GenerateVoucher> {
             SizedBox(
               height: 48.h,
               width: 280.w,
-              child: AppText(
+              child: const AppText(
                 text: "Enter an amount you want to generate a voucher for.",
-                size: 16.sp,
+                size: 16,
                 fontWeight: FontWeight.w600,
                 color: AppColors.leadBlack,
               ),
@@ -81,18 +81,18 @@ class _GenerateVoucherState extends State<GenerateVoucher> {
             SizedBox(
               height: 12.h,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 AppText(
                   text: "Amount",
-                  size: 14.sp,
+                  size: 14,
                   fontWeight: FontWeight.w600,
                   color: AppColors.leadBlack,
                 ),
                 AppText(
                   text: "Available Balance - ₦450,900.78 ",
-                  size: 14.sp,
+                  size: 14,
                   fontWeight: FontWeight.w500,
                   color: AppColors.ashGrey,
                 ),
@@ -105,9 +105,9 @@ class _GenerateVoucherState extends State<GenerateVoucher> {
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(left: 10.r),
                 hintText: "₦  Enter amount",
-                hintStyle: TextStyle(
+                hintStyle: const TextStyle(
                   color: AppColors.ashGrey,
-                  fontSize: 16.sp,
+                  fontSize: 16,
                 ),
                 focusedBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(9)),
