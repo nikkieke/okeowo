@@ -14,7 +14,6 @@ class CardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 126.h,
       width: double.maxFinite,
       padding: EdgeInsets.only(top: 22.r, bottom: 16.r, left: 16.r, right: 16.r),
       decoration: BoxDecoration(
@@ -28,10 +27,10 @@ class CardWidget extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AppText(
+              const AppText(
                 text: "MTOKEN WALLET",
                 color: AppColors.fadedWhite,
-                size: 15.sp,
+                size: 15,
               ),
               SizedBox(
                 height: 8.h,
@@ -42,13 +41,13 @@ class CardWidget extends StatelessWidget {
                   AppText(
                     text: "₦",
                     color: AppColors.fadedWhite,
-                    size: 12.sp,
+                    size: 12,
                     fontFamily: GoogleFonts.inter().fontFamily,
                   ),
-                  AppText(
+                  const AppText(
                     text: " 450,900.78",
                     color: AppColors.starkWhite,
-                    size: 18.sp,
+                    size: 18,
                     fontWeight: FontWeight.w600,
                   ),
                 ],
@@ -56,10 +55,10 @@ class CardWidget extends StatelessWidget {
               SizedBox(
                 height: 8.h,
               ),
-              AppText(
+              const AppText(
                 text: "Eniola Michael",
                 color: AppColors.fadedWhite,
-                size: 15.sp,
+                size: 15,
                 fontWeight: FontWeight.w500,
               ),
             ],
