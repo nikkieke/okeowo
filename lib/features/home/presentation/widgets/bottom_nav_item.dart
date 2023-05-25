@@ -45,19 +45,19 @@ class _BottomNavItemState extends State<BottomNavItem> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                width: 24,
+                width: 24.w,
                 widget.isCurrent == false?
                     widget.iconPath!:
                     widget.iconSelectedPath!,
               ),
 
-              const SizedBox(
-                height: 1.5,
+               SizedBox(
+                height: 1.5.h,
               ),
               AppText(
                   text: widget.title!,
                   fontWeight: FontWeight.w400,
-                  size: 12.5.sp,
+                  size: 12.5,
                   color: widget.isCurrent == false?
                   AppColors.primaryColor.withOpacity(0.5):
                       AppColors.primaryColor
