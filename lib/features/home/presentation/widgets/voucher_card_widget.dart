@@ -14,7 +14,6 @@ class VoucherCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.maxFinite,
-      height: 147,
       padding: EdgeInsets.all(10.r),
       decoration: BoxDecoration(
         color: AppColors.leadGrey,
@@ -34,18 +33,18 @@ class VoucherCardWidget extends StatelessWidget {
                   SizedBox(
                     width: 10.w,
                   ),
-                  AppText(
+                  const AppText(
                     text: "Voucher Balance",
                     fontWeight: FontWeight.w600,
-                    size: 14.sp,
+                    size: 14,
                     color: AppColors.lightBlack,
                   ),
                 ],
               ),
-              AppText(
+              const AppText(
                 text: "₦50,900.78",
                 fontWeight: FontWeight.w600,
-                size: 14.sp,
+                size: 14,
                 color: AppColors.primaryColor,
               ),
             ],
@@ -63,18 +62,18 @@ class VoucherCardWidget extends StatelessWidget {
                   SizedBox(
                     width: 10.w,
                   ),
-                  AppText(
+                  const AppText(
                     text: "Generated Code",
                     fontWeight: FontWeight.w600,
-                    size: 14.sp,
+                    size: 14,
                     color: AppColors.lightBlack,
                   ),
                 ],
               ),
-              AppText(
+              const AppText(
                 text: "987-567-890",
                 fontWeight: FontWeight.w600,
-                size: 14.sp,
+                size: 14,
                 color: AppColors.primaryColor,
               ),
             ],
@@ -84,7 +83,7 @@ class VoucherCardWidget extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  height: 36.h,
+                  padding: EdgeInsets.all(7.5.r),
                   decoration: BoxDecoration(
                     color: AppColors.starkWhite,
                     border: Border.all(color: AppColors.ashGrey, width: 1.w),
@@ -100,10 +99,10 @@ class VoucherCardWidget extends StatelessWidget {
                       SizedBox(
                         width: 5.w,
                       ),
-                      AppText(
+                      const AppText(
                         text: "Copy Code",
                         fontWeight: FontWeight.w600,
-                        size: 14.sp,
+                        size: 14,
                         color: AppColors.inkBlue,
                       ),
                     ],
@@ -113,7 +112,7 @@ class VoucherCardWidget extends StatelessWidget {
               SizedBox(width: 8.w,),
               Expanded(
                 child: Container(
-                  height: 36.h,
+                  padding: EdgeInsets.all(7.5.r),
                   decoration: BoxDecoration(
                     color: AppColors.starkWhite,
                     border: Border.all(color: AppColors.ashGrey, width: 1.w),
@@ -129,10 +128,10 @@ class VoucherCardWidget extends StatelessWidget {
                       SizedBox(
                         width: 5.w,
                       ),
-                      AppText(
+                      const AppText(
                         text: "Share Code",
                         fontWeight: FontWeight.w600,
-                        size: 14.sp,
+                        size: 14,
                         color: AppColors.inkBlue,
                       ),
                     ],
